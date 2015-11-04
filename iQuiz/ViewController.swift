@@ -42,12 +42,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
-    
-    
-    
-    
-    
-    
     @IBAction func settings(sender: UIBarButtonItem) {
         let controller = UIAlertController(title: "Settings", message: "Settings go here", preferredStyle: .Alert)
         let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
