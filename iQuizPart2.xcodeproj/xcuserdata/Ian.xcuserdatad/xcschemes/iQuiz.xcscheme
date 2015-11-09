@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3CA3DEFF1BE6D94D00F43564"
-               BuildableName = "iQuiz.app"
-               BlueprintName = "iQuiz"
-               ReferencedContainer = "container:iQuiz.xcodeproj">
+               BuildableName = "iQuizPart2.app"
+               BlueprintName = "iQuizPart2"
+               ReferencedContainer = "container:iQuizPart2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3CA3DF131BE6D94D00F43564"
-               BuildableName = "iQuizTests.xctest"
-               BlueprintName = "iQuizTests"
-               ReferencedContainer = "container:iQuiz.xcodeproj">
+               BuildableName = "iQuizPart2.xctest"
+               BlueprintName = "iQuizPart2Tests"
+               ReferencedContainer = "container:iQuizPart2.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3CA3DF1E1BE6D94D00F43564"
-               BuildableName = "iQuizUITests.xctest"
-               BlueprintName = "iQuizUITests"
-               ReferencedContainer = "container:iQuiz.xcodeproj">
+               BuildableName = "iQuizPart2.xctest"
+               BlueprintName = "iQuizPart2UITests"
+               ReferencedContainer = "container:iQuizPart2.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3CA3DEFF1BE6D94D00F43564"
-            BuildableName = "iQuiz.app"
-            BlueprintName = "iQuiz"
-            ReferencedContainer = "container:iQuiz.xcodeproj">
+            BuildableName = "iQuizPart2.app"
+            BlueprintName = "iQuizPart2"
+            ReferencedContainer = "container:iQuizPart2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3CA3DEFF1BE6D94D00F43564"
-            BuildableName = "iQuiz.app"
-            BlueprintName = "iQuiz"
-            ReferencedContainer = "container:iQuiz.xcodeproj">
+            BuildableName = "iQuizPart2.app"
+            BlueprintName = "iQuizPart2"
+            ReferencedContainer = "container:iQuizPart2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3CA3DEFF1BE6D94D00F43564"
-            BuildableName = "iQuiz.app"
-            BlueprintName = "iQuiz"
-            ReferencedContainer = "container:iQuiz.xcodeproj">
+            BuildableName = "iQuizPart2.app"
+            BlueprintName = "iQuizPart2"
+            ReferencedContainer = "container:iQuizPart2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
