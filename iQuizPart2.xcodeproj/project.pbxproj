@@ -77,7 +77,7 @@
 		3CA3DEF71BE6D94D00F43564 = {
 			isa = PBXGroup;
 			children = (
-				3CA3DF021BE6D94D00F43564 /* iQuiz */,
+				3CA3DF021BE6D94D00F43564 /* iQuizPart2 */,
 				3CA3DF171BE6D94D00F43564 /* iQuizTests */,
 				3CA3DF221BE6D94D00F43564 /* iQuizUITests */,
 				3CA3DF011BE6D94D00F43564 /* Products */,
@@ -94,7 +94,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3CA3DF021BE6D94D00F43564 /* iQuiz */ = {
+		3CA3DF021BE6D94D00F43564 /* iQuizPart2 */ = {
 			isa = PBXGroup;
 			children = (
 				3CA3DF031BE6D94D00F43564 /* AppDelegate.swift */,
@@ -104,6 +104,7 @@
 				3CA3DF0C1BE6D94D00F43564 /* LaunchScreen.storyboard */,
 				3CA3DF0F1BE6D94D00F43564 /* Info.plist */,
 			);
+			name = iQuizPart2;
 			path = iQuiz;
 			sourceTree = "<group>";
 		};
