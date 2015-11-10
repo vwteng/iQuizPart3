@@ -17,6 +17,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ("Science", "Science description")
     ]
     
+    var mathematics = [
+        ("MathQuestion1", "MathChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("MathQuestion2", "MathChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("MathQuestion3", "MathChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("MathQuestion4", "MathChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #")
+    ]
+    
+    var marvel = [
+        ("MarvelQuestion1", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("MarvelQuestion2", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("MarvelQuestion3", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("MarvelQuestion4", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #")
+    ]
+    
+    var science = [
+        ("Question1", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("Question2", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("Question3", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
+        ("Question4", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #")
+    ]
+    
     let cellIdentifier = "CellIdentifier"
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -59,6 +80,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    var selectedQuiz = ""
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let currCell = tableView.cellForRowAtIndexPath(indexPath)
+        selectedQuiz = (currCell?.textLabel?.text)!
+        self.performSegueWithIdentifier("ShowQuestion", sender: nil)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? QuestionViewController {
+            switch selectedQuiz {
+                case "Mathematics":
+                    vc.quiz = mathematics
+                case "Marvel Super Heroes":
+                    vc.quiz = marvel
+                case "Science":
+                    vc.quiz = science
+            default:
+                vc.quiz = []
+            }
+        }
+    }
+    
 }

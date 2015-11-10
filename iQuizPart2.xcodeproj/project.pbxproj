@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4FB1411BF1613300EB4FCB /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FB1401BF1613300EB4FCB /* QuestionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3C8DB81E1BF1B4B600226314 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8DB81D1BF1B4B600226314 /* AnswerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3CA3DF041BE6D94D00F43564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3DF031BE6D94D00F43564 /* AppDelegate.swift */; };
 		3CA3DF061BE6D94D00F43564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3DF051BE6D94D00F43564 /* ViewController.swift */; };
 		3CA3DF091BE6D94D00F43564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA3DF071BE6D94D00F43564 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C4FB1401BF1613300EB4FCB /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		3C8DB81D1BF1B4B600226314 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		3CA3DF001BE6D94D00F43564 /* iQuizPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuizPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA3DF031BE6D94D00F43564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CA3DF051BE6D94D00F43564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				3CA3DF031BE6D94D00F43564 /* AppDelegate.swift */,
 				3CA3DF051BE6D94D00F43564 /* ViewController.swift */,
 				3CA3DF071BE6D94D00F43564 /* Main.storyboard */,
+				3C8DB81D1BF1B4B600226314 /* AnswerViewController.swift */,
+				3C4FB1401BF1613300EB4FCB /* QuestionViewController.swift */,
 				3CA3DF0A1BE6D94D00F43564 /* Assets.xcassets */,
 				3CA3DF0C1BE6D94D00F43564 /* LaunchScreen.storyboard */,
 				3CA3DF0F1BE6D94D00F43564 /* Info.plist */,
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8DB81E1BF1B4B600226314 /* AnswerViewController.swift in Sources */,
 				3CA3DF061BE6D94D00F43564 /* ViewController.swift in Sources */,
 				3CA3DF041BE6D94D00F43564 /* AppDelegate.swift in Sources */,
+				3C4FB1411BF1613300EB4FCB /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
