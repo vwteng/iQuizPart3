@@ -12,30 +12,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var tableView: UITableView!
     var quizzes = [
-        ("Mathematics", "Mathematics description"),
-        ("Marvel Super Heroes", "Marvel Super Heroes description"),
-        ("Science", "Science description")
+        ("Mathematics", "Answer some math problems"),
+        ("Marvel Super Heroes", "Test your knowledge of super heroes"),
+        ("Science", "Questions about science")
     ]
     
     var mathematics = [
-        ("MathQuestion1", "MathChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("MathQuestion2", "MathChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("MathQuestion3", "MathChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("MathQuestion4", "MathChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #")
+        ["What is 4 + 3?", "1", "5", "7", "12", "7"],
+        ["What is 12 * 10?", "0", "2", "100", "120", "120"],
+        ["What is 50% of 44?", "11", "22", "33", "44", "22"],
+        ["What is 1934.01 * 0?", "0", "10.5", "200.01", "9999", "0"]
     ]
     
     var marvel = [
-        ("MarvelQuestion1", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("MarvelQuestion2", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("MarvelQuestion3", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("MarvelQuestion4", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #")
+        ["MarvelQuestion1", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
+        ["MarvelQuestion2", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
+        ["MarvelQuestion3", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
+        ["MarvelQuestion4", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"]
     ]
     
     var science = [
-        ("Question1", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("Question2", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("Question3", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"),
-        ("Question4", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #")
+        ["Question1", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
+        ["Question2", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
+        ["Question3", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
+        ["Question4", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"]
     ]
     
     let cellIdentifier = "CellIdentifier"
@@ -60,7 +60,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell!.detailTextLabel?.text = quiz.1
         
         return cell!
-
     }
     
     @IBAction func settings(sender: UIBarButtonItem) {

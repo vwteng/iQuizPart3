@@ -8,27 +8,27 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var quiz = [(String, String, String, String, String, String)]()
-    var questionNum = 0
-    var selectedAnswer = ""
-    
+    @IBOutlet var tableView: UITableView!
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var choiceOne: UIButton!
-    @IBOutlet weak var choiceTwo: UIButton!
-    @IBOutlet weak var choiceThree: UIButton!
-    @IBOutlet weak var choiceFour: UIButton!
-    
+    var quiz = [Array<String>()]
+    var questionNum = 0
+    var selectedChoice = ""
+    var correctTotal = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        questionLabel.text = quiz[questionNum].0
-        choiceOne.setTitle(quiz[questionNum].1, forState: .Normal)
-        choiceTwo.setTitle(quiz[questionNum].2, forState: .Normal)
-        choiceThree.setTitle(quiz[questionNum].3, forState: .Normal)
-        choiceFour.setTitle(quiz[questionNum].4, forState: .Normal)
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "back:")
+        self.navigationItem.leftBarButtonItem = newBackButton;
+        
+        questionLabel.text = quiz[questionNum][0]
+    }
+    
+    func back(sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,11 +36,39 @@ class QuestionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? AnswerViewController {
+            vc.selectedChoice = selectedChoice
+            vc.correctAnswer = quiz[questionNum][5]
+            vc.quiz = quiz
+            vc.questionNum = questionNum
+        }
+    }
 
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        if let vc = segue.destinationViewController as? AnswerViewController {
-//        }
-//    }
+    @IBAction func choiceSelected(sender: UIButton) {
+        self.performSegueWithIdentifier("ShowAnswer", sender: nil)
+    }
+    
+    let cellIdentifier = "CellIdentifier"
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell?
+        cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
 
+        cell!.textLabel?.text = quiz[questionNum][indexPath.row + 1]
+        return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let currCell = tableView.cellForRowAtIndexPath(indexPath)
+        selectedChoice = (currCell?.textLabel?.text)!
+    }
 }
