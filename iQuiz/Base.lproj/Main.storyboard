@@ -274,7 +274,7 @@
                                     <action selector="choiceSelected:" destination="Cy5-iQ-ZgM" eventType="touchUpInside" id="EtV-mD-OKg"/>
                                     <action selector="nextSelected:" destination="N93-Ew-F1N" eventType="touchUpInside" id="2CF-xN-PH9"/>
                                     <action selector="nextSelected:" destination="BZe-qJ-TbG" eventType="touchUpInside" id="Glp-o3-Pi0"/>
-                                    <segue destination="dZv-ju-rn7" kind="show" id="JVq-gN-OBG"/>
+                                    <segue destination="dZv-ju-rn7" kind="show" identifier="ShowQuizzes" id="JVq-gN-OBG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-Q9-AAk">
@@ -310,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXY-a3-gRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-169" y="684"/>
+            <point key="canvasLocation" x="-129" y="700"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
