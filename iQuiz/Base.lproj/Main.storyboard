@@ -68,7 +68,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="gnn-bQ-rdq"/>
+                    <navigationItem key="navigationItem" id="gnn-bQ-rdq">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="Fdy-kb-Alz">
+                            <connections>
+                                <action selector="settings:" destination="BYZ-38-t0r" id="vBD-Rz-ZeI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Y9y-xz-Mxl" id="bv6-tJ-cUs"/>
                         <segue destination="Cy5-iQ-ZgM" kind="show" identifier="ShowQuestion" id="a4c-3e-taj"/>
@@ -76,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-95"/>
+            <point key="canvasLocation" x="72" y="-95"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="8PU-BV-shK">
@@ -197,9 +203,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="choiceSelected:" destination="Cy5-iQ-ZgM" eventType="touchUpInside" id="nDD-gc-Crj"/>
                                     <action selector="nextSelected:" destination="N93-Ew-F1N" eventType="touchUpInside" id="bzG-tb-fAa"/>
-                                    <segue destination="Cy5-iQ-ZgM" kind="show" identifier="ShowQuestion" id="3Pr-4U-Ck8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Selected Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-Wn-lYW">
@@ -236,11 +240,12 @@
                         <outlet property="indicatorLabel" destination="C65-go-OtZ" id="Rlb-qp-sIr"/>
                         <outlet property="questionLabel" destination="uM2-nU-ewV" id="NXL-rc-J7o"/>
                         <segue destination="BZe-qJ-TbG" kind="show" identifier="ShowFinished" id="b5n-EY-nZ3"/>
+                        <segue destination="Cy5-iQ-ZgM" kind="show" identifier="ShowQuestion" id="SUK-Q3-gNJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udP-3H-ZdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="-95"/>
+            <point key="canvasLocation" x="1630" y="-95"/>
         </scene>
         <!--Finished View Controller-->
         <scene sceneID="lxg-Vc-SBQ">
@@ -254,20 +259,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descriptive text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAC-7o-2Gm">
-                                <rect key="frame" x="240" y="84" width="120" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-Q9-AAk">
-                                <rect key="frame" x="276" y="168" width="45" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-RC-epP">
                                 <rect key="frame" x="118" y="535" width="365" height="45"/>
                                 <animations/>
@@ -283,27 +274,46 @@
                                     <action selector="choiceSelected:" destination="Cy5-iQ-ZgM" eventType="touchUpInside" id="EtV-mD-OKg"/>
                                     <action selector="nextSelected:" destination="N93-Ew-F1N" eventType="touchUpInside" id="2CF-xN-PH9"/>
                                     <action selector="nextSelected:" destination="BZe-qJ-TbG" eventType="touchUpInside" id="Glp-o3-Pi0"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowQuizzes" id="mRD-ln-rYK"/>
+                                    <segue destination="dZv-ju-rn7" kind="show" id="JVq-gN-OBG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5f-Q9-AAk">
+                                <rect key="frame" x="278" y="169" width="45" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAC-7o-2Gm">
+                                <rect key="frame" x="266" y="84" width="69" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KGH-aK-YIc" firstAttribute="top" secondItem="sgX-RC-epP" secondAttribute="bottom" constant="20" id="18j-vq-HqW"/>
+                            <constraint firstItem="NAC-7o-2Gm" firstAttribute="centerX" secondItem="a8E-tA-yAH" secondAttribute="centerX" id="NfV-OV-zFr"/>
                             <constraint firstItem="KGH-aK-YIc" firstAttribute="top" secondItem="sgX-RC-epP" secondAttribute="bottom" constant="20" id="Saq-0b-Iq5"/>
                             <constraint firstItem="sgX-RC-epP" firstAttribute="centerX" secondItem="a8E-tA-yAH" secondAttribute="centerX" id="iBt-uv-xZr"/>
+                            <constraint firstItem="b5f-Q9-AAk" firstAttribute="centerX" secondItem="a8E-tA-yAH" secondAttribute="centerX" id="mlE-OP-ZkV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D5n-W3-Z4K"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="NAC-7o-2Gm" id="ylC-tY-ns4"/>
+                        <outlet property="scoreLabel" destination="b5f-Q9-AAk" id="gG9-s3-Hhk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXY-a3-gRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="689"/>
+            <point key="canvasLocation" x="-169" y="684"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mRD-ln-rYK"/>
-        <segue reference="3Pr-4U-Ck8"/>
+        <segue reference="a4c-3e-taj"/>
     </inferredMetricsTieBreakers>
 </document>

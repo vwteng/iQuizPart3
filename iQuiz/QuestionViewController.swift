@@ -42,6 +42,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             vc.correctAnswer = quiz[questionNum][5]
             vc.quiz = quiz
             vc.questionNum = questionNum
+            vc.correctTotal = correctTotal
         }
     }
 

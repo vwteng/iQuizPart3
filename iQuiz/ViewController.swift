@@ -21,21 +21,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ["What is 4 + 3?", "1", "5", "7", "12", "7"],
         ["What is 12 * 10?", "0", "2", "100", "120", "120"],
         ["What is 50% of 44?", "11", "22", "33", "44", "22"],
-        ["What is 1934.01 * 0?", "0", "10.5", "200.01", "9999", "0"]
+        ["What is 1934.01 * 0?", "0", "10.5", "200.01", "9999", "0"],
+        ["What is 10000 / 100?", "0.1", "10", "100", "1000", "100"]
     ]
     
     var marvel = [
-        ["MarvelQuestion1", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
-        ["MarvelQuestion2", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
-        ["MarvelQuestion3", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
-        ["MarvelQuestion4", "MarvelChoice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"]
+        ["Who is not a part of the original Fantastic Four?", "Mister Fantastic", "Invisible Man", "The Human Torch", "The Thing", "Invisible Man"],
+        ["When did the first TV series based on Marvel characters debut?", "1951", "1959", "1966", "1971", "1966"],
+        ["Who is the alter ego of Captain America?", "Robert Samuels", "Clark Kent", "Joe Simons", "Steve Rogers", "Steve Rogers"],
+        ["What species is the Hulk?", "Human Gamma Mutate", "New Mutate", "Beta Mutate", "Savage Land Mutate", "Human Gamma Mutate"]
     ]
     
     var science = [
-        ["Question1", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
-        ["Question2", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
-        ["Question3", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"],
-        ["Question4", "Choice 1", "Choice 2", "Choice 3", "Choice 4", "Answer #"]
+        ["What is the 32nd element?", "Gold", "Gallium", "Germanium", "Gadolinium", "Germanium"],
+        ["What is the least common blood type?", "AB-", "O+", "B-", "AB+ ", "AB-"],
+        ["How many bones are in the body at birth?", "190", "230", "270", "310", "270"]
     ]
     
     let cellIdentifier = "CellIdentifier"

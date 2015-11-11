@@ -52,31 +52,28 @@ class AnswerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func nextSelected(sender: UIButton) {
+    @IBAction func nextSelected(sender: AnyObject) {
         // If no more questions to ask
         if questionNum == quiz.count {
-            self.performSegueWithIdentifier("ShowFinished", sender: self)
+            self.performSegueWithIdentifier("ShowFinished", sender: nil)
+        } else {
+            self.performSegueWithIdentifier("ShowQuestion", sender: nil)
         }
-        
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // If there is another question...
         if questionNum < quiz.count {
             if let vc = segue.destinationViewController as? QuestionViewController {
                 vc.questionNum = questionNum
                 vc.quiz = quiz
                 vc.correctTotal = correctTotal
             }
+        } else {
+            if let vc = segue.destinationViewController as? FinishedViewController {
+                vc.questionNum = questionNum
+                vc.correctTotal = correctTotal
+            }
         }
-//        else {
-//            if let vc = segue.destinationViewController as? FinishedViewController {
-//                vc.questionNum = questionNum
-//                vc.quiz = quiz
-//                vc.correctTotal = correctTotal
-//            }
-//
-//        }
     }
 
 }
