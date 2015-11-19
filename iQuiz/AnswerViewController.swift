@@ -1,6 +1,6 @@
 //
 //  AnswerViewController.swift
-//  iQuizPart2
+//  iQuizPart3
 //
 //  Created by Vivian on 11/9/15.
 //  Copyright © 2015 Vivian. All rights reserved.

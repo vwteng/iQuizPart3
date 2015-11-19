@@ -1,6 +1,6 @@
 //
 //  FinishedViewController.swift
-//  iQuizPart2
+//  iQuizPart3
 //
 //  Created by Vivian on 11/10/15.
 //  Copyright © 2015 Vivian. All rights reserved.
@@ -26,7 +26,7 @@ class FinishedViewController: UIViewController {
         scoreLabel.text = "You got \(String(correctTotal)) out of \(String(questionNum)) correct"
         
         let percentCorrect = Double(correctTotal)/Double(questionNum)
-        print("\(percentCorrect)")
+
         if percentCorrect == 1 {
             messageLabel.text = "Perfect!"
         } else if percentCorrect >= 0.8 {
@@ -51,15 +51,5 @@ class FinishedViewController: UIViewController {
     @IBAction func nextSelected(sender: AnyObject) {
         self.performSegueWithIdentifier("ShowQuizzes", sender: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

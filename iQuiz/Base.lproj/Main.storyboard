@@ -5,6 +5,69 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="49c-pb-r7g">
+            <objects>
+                <viewController id="pSl-e4-9oR" customClass="SettingsViewController" customModule="iQuizPart2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aM9-ds-Fju"/>
+                        <viewControllerLayoutGuide type="bottom" id="lQo-rG-MAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="69U-Pu-jWr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Download New Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWr-D1-1Ng">
+                                <rect key="frame" x="202" y="100" width="197" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yO-bk-cRE">
+                                <rect key="frame" x="261" y="275" width="79" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Check Now"/>
+                                <connections>
+                                    <action selector="downloadQuestions:" destination="pSl-e4-9oR" eventType="touchUpInside" id="xQr-7k-pNE"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HA4-aa-4QQ">
+                                <rect key="frame" x="130" y="191" width="341" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O94-SD-O4G">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Done" id="XU9-st-nbb">
+                                        <connections>
+                                            <segue destination="dRK-Sg-g1l" kind="unwind" unwindAction="exit:" id="duW-Y0-8ak"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lQo-rG-MAv" firstAttribute="top" secondItem="O94-SD-O4G" secondAttribute="bottom" id="Noj-Ga-gfN"/>
+                            <constraint firstItem="HA4-aa-4QQ" firstAttribute="centerX" secondItem="69U-Pu-jWr" secondAttribute="centerX" id="hLS-Ki-E7f"/>
+                            <constraint firstItem="OWr-D1-1Ng" firstAttribute="centerX" secondItem="69U-Pu-jWr" secondAttribute="centerX" id="s6Q-ZF-oxg"/>
+                            <constraint firstItem="9yO-bk-cRE" firstAttribute="centerX" secondItem="69U-Pu-jWr" secondAttribute="centerX" id="wcC-b9-RRP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="urlTextField" destination="HA4-aa-4QQ" id="aRG-nh-3SV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GP1-k4-7tK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dRK-Sg-g1l" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="72" y="-756"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -71,7 +134,9 @@
                     <navigationItem key="navigationItem" id="gnn-bQ-rdq">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="Fdy-kb-Alz">
                             <connections>
-                                <action selector="settings:" destination="BYZ-38-t0r" id="vBD-Rz-ZeI"/>
+                                <segue destination="pSl-e4-9oR" kind="popoverPresentation" popoverAnchorBarButtonItem="Fdy-kb-Alz" id="32T-RS-CZX">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

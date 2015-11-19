@@ -1,6 +1,6 @@
 //
 //  QuestionViewController.swift
-//  iQuizPart2
+//  iQuizPart3
 //
 //  Created by Vivian on 11/9/15.
 //  Copyright © 2015 Vivian. All rights reserved.
@@ -26,7 +26,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         
         questionLabel.text = quiz[questionNum][0]
     }
-    
+
     func back(sender: UIBarButtonItem) {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  iQuiz
+//  iQuizPart3
 //
 //  Created by Vivian on 11/1/15.
 //  Copyright © 2015 Vivian. All rights reserved.
