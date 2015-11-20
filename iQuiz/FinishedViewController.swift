@@ -12,6 +12,7 @@ class FinishedViewController: UIViewController {
 
     var questionNum = 0
     var correctTotal = 0
+    var quizzes = [AnyObject]()
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
@@ -46,6 +47,12 @@ class FinishedViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? ViewController {
+            vc.quizzes = quizzes
+        }
     }
     
     @IBAction func nextSelected(sender: AnyObject) {

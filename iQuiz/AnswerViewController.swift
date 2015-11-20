@@ -17,6 +17,7 @@ class AnswerViewController: UIViewController {
     
     var selectedChoice = ""
     var correctAnswer = ""
+    var quizzes = [AnyObject]()
     var quiz = [Array<String>()]
     var questionNum = 0
     var correctTotal = 0
@@ -67,11 +68,13 @@ class AnswerViewController: UIViewController {
                 vc.questionNum = questionNum
                 vc.quiz = quiz
                 vc.correctTotal = correctTotal
+                vc.quizzes = quizzes
             }
         } else {
             if let vc = segue.destinationViewController as? FinishedViewController {
                 vc.questionNum = questionNum
                 vc.correctTotal = correctTotal
+                vc.quizzes = quizzes
             }
         }
     }

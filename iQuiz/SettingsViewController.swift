@@ -12,7 +12,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var urlTextField: UITextField!
     
-    var quizzes1 = [AnyObject]()
+    var quizzes = [AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +35,8 @@ class SettingsViewController: UIViewController {
         request.HTTPMethod = "GET"
         
         let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-            let statusCode = (response as! NSHTTPURLResponse).statusCode
-            print("URL Task Worked: \(statusCode)")
             do {
-                self.quizzes1 = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [AnyObject]
+                self.quizzes = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [AnyObject]
             } catch {
                 print("There was an error...")
             }
@@ -46,12 +44,10 @@ class SettingsViewController: UIViewController {
         task.resume()
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? ViewController {
-            vc.quizzes = quizzes1
+            vc.quizzes = quizzes
         }
     }
-    
     
 }

@@ -55,6 +55,7 @@
                         <constraints>
                             <constraint firstItem="lQo-rG-MAv" firstAttribute="top" secondItem="O94-SD-O4G" secondAttribute="bottom" id="Noj-Ga-gfN"/>
                             <constraint firstItem="HA4-aa-4QQ" firstAttribute="centerX" secondItem="69U-Pu-jWr" secondAttribute="centerX" id="hLS-Ki-E7f"/>
+                            <constraint firstItem="lQo-rG-MAv" firstAttribute="top" secondItem="O94-SD-O4G" secondAttribute="bottom" id="pGb-Cj-hM0"/>
                             <constraint firstItem="OWr-D1-1Ng" firstAttribute="centerX" secondItem="69U-Pu-jWr" secondAttribute="centerX" id="s6Q-ZF-oxg"/>
                             <constraint firstItem="9yO-bk-cRE" firstAttribute="centerX" secondItem="69U-Pu-jWr" secondAttribute="centerX" id="wcC-b9-RRP"/>
                         </constraints>
@@ -242,10 +243,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Correct Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LN-3i-KXj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Correct Answer" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LN-3i-KXj">
                                 <rect key="frame" x="240" y="281" width="120" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -271,17 +272,17 @@
                                     <action selector="nextSelected:" destination="N93-Ew-F1N" eventType="touchUpInside" id="bzG-tb-fAa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Selected Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-Wn-lYW">
-                                <rect key="frame" x="237" y="219" width="126" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM2-nU-ewV">
                                 <rect key="frame" x="13" y="45" width="575" height="105"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Selected Choice" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-Wn-lYW">
+                                <rect key="frame" x="237" y="219" width="126" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -379,6 +380,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="a4c-3e-taj"/>
+        <segue reference="SUK-Q3-gNJ"/>
     </inferredMetricsTieBreakers>
 </document>

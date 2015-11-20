@@ -12,6 +12,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var questionLabel: UILabel!
+    var quizzes = [AnyObject]()
     var quiz = [Array<String>()]
     var questionNum = 0
     var selectedChoice = ""
